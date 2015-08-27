@@ -1,6 +1,6 @@
 import sbt._
 import sbt.Keys._
-import com.virtuslab.avs._
+import org.virtuslab.avs._
 
 object Build extends Build {
 

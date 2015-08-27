@@ -1,7 +1,7 @@
-package com.virtuslab.test
+package org.virtuslab.test
 
 import akka.actor.{ActorSystem, Props, Actor}
-import com.virtuslab.avs.core.ActorVersioningCore
+import org.virtuslab.avs.core.ActorVersioningCore
 import scala.concurrent.duration._
 import scala.concurrent.ExecutionContext
 
@@ -42,7 +42,7 @@ object TestApp extends App {
   val actorSystemModule = new ActorVersioningCore(system) {
 
     val printerRef = system.actorOf(PrinterActor.props().withVersioning)
-    system.scheduler.schedule(1 second, 2 second, printerRef, SimpleMessage("Hello World!"))
+    system.scheduler.schedule(1.second, 2.second, printerRef, SimpleMessage("Hello World!"))
 
   }
 
